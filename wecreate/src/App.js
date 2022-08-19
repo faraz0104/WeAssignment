@@ -17,11 +17,16 @@ function App() {
   })
 
    useEffect(()=>{
-    axios.get("https://jsonplaceholder.typicode.com/comments")
+
+    setTimeout(()=>{
+      axios.get("https://jsonplaceholder.typicode.com/comments")
     .then((res)=>{
       setDatas(res.data[0].body)
       console.log("data",datas)
     })
+     }, 3000)
+ 
+    
    })
 
 
